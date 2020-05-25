@@ -1,0 +1,18 @@
+<div>
+    <mat-table [dataSource]="dataSource">
+          <ng-container matColumnDef="_id">
+            <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+            <mat-cell *matCellDef="let user">{{user._id}}</mat-cell>
+        </ng-container> 
+         <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+            <mat-cell *matCellDef="let user">{{user.name}}</mat-cell>
+        </ng-container>
+       <ng-container matColumnDef="roll">
+            <mat-header-cell *matHeaderCellDef>Roll Number</mat-header-cell>
+            <mat-cell *matCellDef="let user">{{user.roll}}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>  
+    </mat-table>
+</div>
